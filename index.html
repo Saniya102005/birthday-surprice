@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Birthday Surprise 🎂</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= BACKGROUND EFFECTS ================= -->
+
+    <div class="floating-hearts">
+        <span>💜</span>
+        <span>💗</span>
+        <span>💖</span>
+        <span>💕</span>
+        <span>💜</span>
+        <span>💗</span>
+        <span>💖</span>
+        <span>💕</span>
+    </div>
+
+
+    <!-- ================= MUSIC ================= -->
+
+    <audio id="birthdaySong" loop>
+    <source src="music/song.mp4" type="video/mp4">
+</audio>
+
+
+    <!-- ================= EFFECTS ================= -->
+
+    <div id="effects"></div>
+
+
+    <!-- =====================================================
+         WELCOME PAGE
+    ====================================================== -->
+
+    <section id="welcome" class="page active">
+
+        <div class="glass-card welcome-card">
+
+            <div class="emoji-big">
+                🎂
+            </div>
+
+            <h1>
+                Hey,
+                <span id="personName">
+                    Favourite Person
+                </span>
+                ! 💜
+            </h1>
+
+            <p class="subtitle">
+                I made something special just for you...
+            </p>
+
+            <div class="heart-big">
+                💗
+            </div>
+
+            <p>
+                A little journey filled with memories,
+                surprises and lots of love awaits you. ✨
+            </p>
+
+            <button
+                class="main-btn"
+                onclick="showPage('birthday')">
+                Start Your Surprise 🎁
+            </button>
+
+            <button
+                class="music-btn"
+                id="musicButton"
+                onclick="toggleMusic()">
+                🎵 Play Special Song
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         BIRTHDAY PAGE
+    ====================================================== -->
+
+    <section id="birthday" class="page">
+
+        <div class="glass-card">
+
+            <div class="emoji-big">
+                🎉
+            </div>
+
+            <h1>
+                Happy Birthday Goryaaa! 🎂
+            </h1>
+
+            <h2 id="birthdayName">
+                Favourite Person
+            </h2>
+
+            <p class="birthday-text">
+                Today is all about celebrating YOU! 💜
+            </p>
+
+            <p>
+                May your day be filled with happiness,
+                laughter, beautiful memories and everything
+                your heart wishes for.💗
+            </p>
+
+            <div class="birthday-emojis">
+                🎈 🎁 🎂 🥳 🎊 💗
+            </div>
+
+            <button
+                class="main-btn"
+                onclick="showPage('cake')">
+                Continue 💫
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CAKE PAGE
+    ====================================================== -->
+
+    <section id="cake" class="page">
+
+        <div class="glass-card">
+
+            <h1>
+                Make a Wish! 🌟
+            </h1>
+
+            <p>
+                Click all three candles to blow them out. 🕯️
+            </p>
+
+            <div class="cake-container">
+
+                <div class="candles">
+
+                    <button
+                        class="candle"
+                        onclick="blowCandle(this)">
+                        🔥
+                    </button>
+
+                    <button
+                        class="candle"
+                        onclick="blowCandle(this)">
+                        🔥
+                    </button>
+
+                    <button
+                        class="candle"
+                        onclick="blowCandle(this)">
+                        🔥
+                    </button>
+
+                </div>
+
+                <div class="cake-top">
+                    💗 💗 💗
+                </div>
+
+                <div class="cake-body">
+                    🎂
+                </div>
+
+            </div>
+
+            <p
+                id="cakeMessage"
+                class="result-message">
+                Make your birthday wish... 💫
+            </p>
+
+            <button
+                id="cakeNext"
+                class="main-btn hidden"
+                onclick="showPage('special')">
+                See Your Special Messages 💌
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SPECIAL MESSAGES
+    ====================================================== -->
+
+    <section id="special" class="page">
+
+        <div class="glass-card wide-card">
+
+            <h1>
+                Something Special For You 💜
+            </h1>
+
+            <p>
+                Click the cards to discover little messages.
+            </p>
+
+            <div class="special-grid">
+
+
+                <!-- CARD 1 -->
+
+                <div
+                    class="flip-card"
+                    onclick="flipCard(this)">
+
+                    <div class="flip-inner">
+
+                        <div class="flip-front">
+                            💜
+                            <span>
+                                Click Me
+                            </span>
+                        </div>
+
+                        <div class="flip-back">
+                            You deserve all the happiness
+                            in the world! 💗
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CARD 2 -->
+
+                <div
+                    class="flip-card"
+                    onclick="flipCard(this)">
+
+                    <div class="flip-inner">
+
+                        <div class="flip-front">
+                            🌸
+                            <span>
+                                Click Me
+                            </span>
+                        </div>
+
+                        <div class="flip-back">
+                            Keep smiling because your smile
+                            is so beautiful! 😊💗
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CARD 3 -->
+
+                <div
+                    class="flip-card"
+                    onclick="flipCard(this)">
+
+                    <div class="flip-inner">
+
+                        <div class="flip-front">
+                            ✨
+                            <span>
+                                Click Me
+                            </span>
+                        </div>
+
+                        <div class="flip-back">
+                            May every dream you have
+                            come true. 💗
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CARD 4 -->
+
+                <div
+                    class="flip-card"
+                    onclick="flipCard(this)">
+
+                    <div class="flip-inner">
+
+                        <div class="flip-front">
+                            💕
+                            <span>
+                                Click Me
+                            </span>
+                        </div>
+
+                        <div class="flip-back">
+                            You make ordinary moments
+                            feel special. 💗
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="main-btn"
+                onclick="showPage('wheel')">
+                Next Surprise 🎡
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SPIN WHEEL
+    ====================================================== -->
+
+    <section id="wheel" class="page">
+
+        <div class="glass-card">
+
+            <h1>
+                Spin the Wheel 🎡
+            </h1>
+
+            <p>
+                Let's see what your birthday surprise says!
+            </p>
+
+            <div class="wheel-wrapper">
+
+                <div class="wheel-pointer">
+                    ▼
+                </div>
+
+                <div
+                    id="wheelCircle"
+                    class="wheel-circle">
+
+                    <div class="wheel-text">
+                        💜
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="spinButton"
+                class="main-btn"
+                onclick="spinWheel()">
+                Spin the Wheel 🎡
+            </button>
+
+
+            <p
+                id="wheelResult"
+                class="result-message hidden">
+            </p>
+
+
+            <button
+                id="wheelNext"
+                class="main-btn hidden"
+                onclick="showPage('quiz')">
+                Next 💫
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         QUIZ
+    ====================================================== -->
+
+    <section id="quiz" class="page">
+
+        <div class="glass-card">
+
+            <div class="emoji-big">
+                🧠
+            </div>
+
+            <h1>
+                Quick Birthday Quiz! 🎯
+            </h1>
+
+            <p>
+                What makes a birthday truly special?
+            </p>
+
+
+            <div class="quiz-options">
+
+                <button
+                    onclick="quizAnswer(false)">
+                    🎁 Expensive Gifts
+                </button>
+
+                <button
+                    onclick="quizAnswer(false)">
+                     🤗 Close Hug
+                </button>
+
+                <button
+                    onclick="quizAnswer(true)">
+                     💗 Beautiful Memories
+                </button>
+
+                <button
+                    onclick="quizAnswer(false)">
+                    💋 Kiss
+                </button>
+
+            </div>
+
+
+            <p
+                id="quizMessage"
+                class="result-message">
+            </p>
+
+
+            <button
+                id="quizNext"
+                class="main-btn hidden"
+                onclick="showPage('password')">
+                Unlock Secret Memories 🔐
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PASSWORD
+    ====================================================== -->
+
+    <section id="password" class="page">
+
+        <div class="glass-card">
+
+            <div class="lock-icon">
+                🔐
+            </div>
+
+            <h1>
+                Secret Memories 🔒
+            </h1>
+
+            <p>
+                Only someone special knows the secret password. 💗
+            </p>
+
+
+            <input
+                type="text"
+                id="passwordInput"
+                placeholder="Enter password">
+
+
+            <button
+                class="main-btn"
+                onclick="unlockMemories()">
+                Unlock 💜
+            </button>
+
+
+            <p
+                id="passwordMessage"
+                class="result-message">
+            </p>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MEMORIES
+    ====================================================== -->
+
+    <section id="memories" class="page">
+
+        <div class="glass-card wide-card">
+
+            <h1>
+                Our Beautiful Memories 📸💗
+            </h1>
+
+            <p>
+                Click on a memory to see its special message. 💗
+            </p>
+
+
+            <div class="memory-grid">
+
+
+                <!-- MEMORY 1 -->
+
+                <div
+                    class="memory-card"
+                    onclick="openMemory(0)">
+
+                    <img
+                        src="images/photo1.jpeg"
+                        alt="Memory 1">
+
+                    <div>
+                        Memory #1 💜
+                    </div>
+
+                </div>
+
+
+                <!-- MEMORY 2 -->
+
+                <div
+                    class="memory-card"
+                    onclick="openMemory(1)">
+
+                    <img
+                        src="images/photo2.jpeg"
+                        alt="Memory 2">
+
+                    <div>
+                        Memory #2 💕
+                    </div>
+
+                </div>
+
+
+                <!-- MEMORY 3 -->
+
+                <div
+                    class="memory-card"
+                    onclick="openMemory(2)">
+
+                    <img
+                        src="images/photo3.jpeg"
+                        alt="Memory 3">
+
+                    <div>
+                        Memory #3 🌸
+                    </div>
+
+                </div>
+
+
+                <!-- MEMORY 4 -->
+
+                <div
+                    class="memory-card"
+                    onclick="openMemory(3)">
+
+                    <img
+                        src="images/photo4.jpeg"
+                        alt="Memory 4">
+
+                    <div>
+                        Memory #4 ✨
+                    </div>
+
+                </div>
+
+
+                <!-- MEMORY 5 -->
+
+                <div
+                    class="memory-card"
+                    onclick="openMemory(4)">
+
+                    <img
+                        src="images/photo5.jpeg"
+                        alt="Memory 5">
+
+                    <div>
+                        Memory #5 💕
+                    </div>
+
+                </div>
+
+
+                <!-- MEMORY 6 -->
+
+                <div
+                    class="memory-card"
+                    onclick="openMemory(5)">
+
+                    <img
+                        src="images/photo6.jpeg"
+                        alt="Memory 6">
+
+                    <div>
+                        Memory #6 🌟
+                    </div>
+
+                </div>
+
+
+                <!-- MEMORY 7 -->
+
+                <div
+                    class="memory-card"
+                    onclick="openMemory(6)">
+
+                    <img
+                        src="images/photo7.jpeg"
+                        alt="Memory 7">
+
+                    <div>
+                        Memory #7 💌
+                    </div>
+
+                </div>
+
+
+                <!-- MEMORY 8 -->
+
+                <div
+                    class="memory-card"
+                    onclick="openMemory(7)">
+
+                    <img
+                        src="images/photo8.jpeg"
+                        alt="Memory 8">
+
+                    <div>
+                        Memory #8 🦋
+                    </div>
+
+                </div>
+
+
+                <!-- MEMORY 9 -->
+
+                <div
+                    class="memory-card"
+                    onclick="openMemory(8)">
+
+                    <img
+                        src="images/photo9.jpeg"
+                        alt="Memory 9">
+
+                    <div>
+                        Memory #9 🎀
+                    </div>
+
+                </div>
+
+
+                <!-- MEMORY 10 -->
+
+                <div
+                    class="memory-card"
+                    onclick="openMemory(9)">
+
+                    <img
+                        src="images/photo10.jpeg"
+                        alt="Memory 10">
+
+                    <div>
+                        Memory #10 🎂
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="main-btn"
+                onclick="showPage('letter')">
+                One Last Message 💌
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MEMORY POPUP
+    ====================================================== -->
+
+    <div
+        id="memoryPopup"
+        class="popup-overlay">
+
+        <div class="memory-popup">
+
+
+            <button
+                class="close-btn"
+                onclick="closeMemory()">
+                ×
+            </button>
+
+
+            <h2 id="popupTitle">
+                Memory
+            </h2>
+
+
+            <img
+                id="popupImage"
+                src=""
+                alt="Memory">
+
+
+            <p id="popupMessage">
+            </p>
+
+
+            <button
+                class="main-btn small-btn"
+                onclick="showMessage()">
+                Read Special Message 💌
+            </button>
+
+
+            <p
+                id="extraPopupMessage"
+                class="extra-message hidden">
+                Some moments become memories,
+                and some memories become treasures. 💜
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         LETTER
+    ====================================================== -->
+
+    <section id="letter" class="page">
+
+        <div class="glass-card letter-card">
+
+            <div class="letter-decoration">
+                💌
+            </div>
+
+
+            <h1>
+                A Little Message For You 💜
+            </h1>
+
+
+            <div class="letter">
+
+                <p>
+                    Dear
+                    <span id="letterPerson">
+                        Favourite Person, Goryaaa💗
+                    </span>,
+                </p>
+
+
+                <p>
+                    On your special day, I just want you to know
+                    how wonderful and special you are.
+                </p>
+
+
+                <p>
+                    Life gives us many moments, but the memories
+                    we create with the people we care about are
+                    the ones we keep closest to our hearts.
+                </p>
+
+
+                <p>
+                    Happiest birthday to the most precious person of my life💗😍🌚 Today is your special day I wish that you always stay happy, healthy and blessed🫶😍✨ I don't know if I could finish this paragraph because words really can't explain my love towards you💗💗 but a'm so happy that you are in my life 💗🥰🥹Thanks to come in my life this day is my special day💗🥳🤩 Your birthday is as beautiful and full of love as you are 💗🤗😙You deserve only the best and I wish that for you.♥️🍫🎁 Best wishes Goryaaa💗😘I hope all your wishes come true on this special day🫶🌸🤞 Thank you for making me laugh and smile when am sad or have a bad day ☺️🙃I still get excited when I seen your name pop up on my phone💗👻 You're always in my mind you're  all I want ,all I need 💗🫂♾️Thank you for everything you do for me you're rare and very special for me♥️🤗🥹 Goryaaa you'll never know how much I love uhh because my live for you never expressed in word's💗🙃 I will always her for you if you let me No amount of distance,pains,fight or difference in opinion can break my bond with you. 💟🫂🧿You fill the space in my mind and my heart 💗🥰😍✨you're sweetest person in the universe💗😘😎 l pray your birthday will bring you all your good hearts desire 🫶♥️🤩🌸One's again Happiestttttt Birthdayyyy Goryaaaaa💗
+                </p>
+
+
+                <p>
+                    Never stop smiling, never stop dreaming,
+                    and always remember how special you are. 💗
+                </p>
+
+ 
+                <p class="signature">
+                    Happy Birthday Goryaaaaa💗🎂
+                    <br>
+                    With lots of love 💗
+                </p>
+
+            </div>
+
+
+            <button
+                class="main-btn"
+                onclick="showPage('gift')">
+                Final Surprise 🎁
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FINAL GIFT
+    ====================================================== -->
+
+    <section id="gift" class="page">
+
+        <div class="glass-card gift-card">
+
+            <div
+                id="giftBox"
+                class="gift-box"
+                onclick="openGift()">
+                🎁
+            </div>
+
+
+            <h1>
+                One Last Surprise! 🎁
+            </h1>
+
+
+            <p>
+                Click the gift to reveal your final birthday surprise.
+            </p>
+
+
+            <div
+                id="finalMessage"
+                class="final-message hidden">
+
+                <div class="emoji-big">
+                    🎉
+                </div>
+
+
+                <h2>
+                    Happy Birthday! 💜
+                </h2>
+
+
+                <p>
+                    May your life always be filled with
+                    happiness, love, laughter and countless
+                    beautiful memories. ✨
+                </p>
+
+
+                <div class="celebration">
+                    🎂 🎈 🎁 🥳 💜 🎊
+                </div>
+
+
+                <h3>
+                    Keep shining! 🌟
+                </h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
