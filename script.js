@@ -386,70 +386,70 @@ document.addEventListener("DOMContentLoaded", function () {
 const memories = [
 
     {
-        photo: "images/photo1.jpeg",
+        photo: "photo1.jpeg",
         title: "Memory #1 💜",
         message:
             "Our first meeting may have been just one moment, but it became a beautiful memory I’ll always keep close to my heart. 💜✨ I didn’t know what to expect, but meeting you made that moment truly special. 💗"
     },
 
     {
-        photo: "images/photo2.jpeg",
+        photo: "photo2.jpeg",
         title: "Memory #2 💕",
         message:
             "Our first Traditional Day together made an ordinary college day feel so special. And that little jugad to click a photo together became one of my favorite memories with you. ❤️📸"
     },
 
     {
-        photo: "images/photo3.jpeg",
+        photo: "photo3.jpeg",
         title: "Memory #3 🌸",
         message:
             "That first moment when we came closer felt like the whole world disappeared, leaving just you and me. ❤️✨"
     },
 
     {
-        photo: "images/photo4.jpeg",
+        photo: "photo4.jpeg",
         title: "Memory #4 🌊",
         message:
             "Spending quality time with you at the beach, away from everything, made every moment feel so peaceful and special. 🌊❤️✨"
     },
 
     {
-        photo: "images/photo5.jpeg",
+        photo: "photo5.jpeg",
         title: "Memory #5 🌸",
         message:
             "Dasara felt a little more special because I got to celebrate it with you. A beautiful festival and an even more beautiful memory. ❤️✨🌸"
     },
 
     {
-        photo: "images/photo6.jpeg",
+        photo: "photo6.jpeg",
         title: "Memory #6 ✨",
         message:
             "This is one of those little moments that became a beautiful memory just because I got to share it with you. ❤️✨"
     },
 
     {
-        photo: "images/photo7.jpeg",
+        photo: "photo7.jpeg",
         title: "Memory #7 🚆",
         message:
             "The train kept moving, but I wished our little journey together could stay still forever. Every moment beside you felt special. ❤️🚆✨"
     },
 
     {
-        photo: "images/photo8.jpeg",
+        photo: "photo8.jpeg",
         title: "Memory #8 🎀",
         message:
             "Celebrating my special day with you made it even more special. Having you by my side was honestly the best part of the day. ❤️✨"
     },
 
     {
-        photo: "images/photo9.jpeg",
+        photo: "photo9.jpeg",
         title: "Memory #9 🙏",
         message:
             "One wish I prayed for came true, so visiting Jivdani Temple with you to seek blessings made the moment even more meaningful. 🙏❤️✨"
     },
 
     {
-        photo: "images/photo10.jpeg",
+        photo: "photo10.jpeg",
         title: "Memory #10 💕",
         message:
             "Matching colors, beautiful smiles, and you by my side — this photo became a little piece of our story that I’ll always keep close to my heart. ❤️📸✨"
