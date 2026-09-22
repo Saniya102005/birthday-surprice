@@ -65,46 +65,36 @@ document.addEventListener("DOMContentLoaded", function () {
 /* =====================================================
    MUSIC
 ===================================================== */
-
 let musicPlaying = false;
 
 function toggleMusic() {
-
     const song = document.getElementById("birthdaySong");
     const button = document.getElementById("musicButton");
 
     if (!song || !button) {
+        alert("Music player not found.");
         return;
     }
 
     if (!musicPlaying) {
-
         song.play()
-            .then(function () {
-
+            .then(() => {
                 musicPlaying = true;
-
                 button.innerText = "🔇 Pause Special Song";
-
             })
-            .catch(function () {
-
-                alert(
-                    "Please click the page first, then try playing the song again."
-                );
-
+            .catch((error) => {
+                console.log("Music error:", error);
+                alert("Song could not be played. Please check that music/song.mp4 exists.");
             });
-
     } else {
-
         song.pause();
-
         musicPlaying = false;
-
         button.innerText = "🎵 Play Special Song";
-
     }
 }
+
+    
+
 
 
 /* =====================================================
